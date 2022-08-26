@@ -23,8 +23,9 @@ CREATE TABLE `films_2020` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1003 DEFAULT CHARSET=utf8;
 
 -- Add the new films to the database.
-load data infile 'files_for_lab/films_2020.csv'
-into table films_2020;
+-- load data infile 'files_for_lab/films_2020.csv'
+-- into table films_2020;
+-- this gave me an "unexpected error", so i used the import wizard
 
 -- Update information on rental_duration, rental_rate, and replacement_cost.
 update films_2020 
