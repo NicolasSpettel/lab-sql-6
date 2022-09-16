@@ -1,11 +1,11 @@
 -- Lab | SQL Queries 6
 
-use sakila;
+USE sakila;
 
-show variables like 'local_infile';
-set global local_infile = 1;
+SHOW VARIABLES LIKE 'local_infile';
+SET GLOBAL local_infile = 1;
 
-drop table if exists films_2020;
+DROP TABLE IF EXISTS films_2020;
 CREATE TABLE `films_2020` (
   `film_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -28,9 +28,13 @@ CREATE TABLE `films_2020` (
 -- this gave me an "unexpected error", so i used the import wizard
 
 -- Update information on rental_duration, rental_rate, and replacement_cost.
-update films_2020 
-set rental_duration = 3,
-rental_rate = 2.99,
-replacement_cost = 8.99;
+UPDATE films_2020 
+SET 
+    rental_duration = 3,
+    rental_rate = 2.99,
+    replacement_cost = 8.99;
 
-select * from films_2020;	
+SELECT 
+    *
+FROM
+    films_2020;	
